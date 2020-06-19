@@ -1,350 +1,300 @@
-<!-- final edit-->
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150203990-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prabhaias</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-        gtag('config', 'UA-150203990-2');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Prabha Institute of Civil Services</title>
-    <meta name="Description"
-        content="Prabha institute of Civil Services was established on 15th August, 2002 for the benefit of the students who want to prepare for Public Administration but find limited options when it comes to Hindi medium. From 2002 till date we have been playing a vital role in bringing the Civil Service aspirants into the mainstream of civil service examination.">
-    <meta name="Keywords" content="Prabha IAS, IAS, Civil Services, Coaching, BPSC, UPSC, UPPCS, Atul Lohiya">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+	<!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/3fed036461.js" crossorigin="anonymous"></script>
+	 <style>
+  </style>
 </head>
-<!--fixed loading issues on browser-->
 <body>
-    <div id="app">
-        <main>
-            <div class="theme-background white-text right-align">
-                <div class="top-contact-bar">
-                    <span class="institute-number"><i
-                            style="padding-right: 4px;font-size: 1rem;line-height: 1rem;vertical-align: middle;"
-                            class="material-icons">call</i>9810651005</span>
-                </div>
-            </div>
-            <nav class="z-depth-0">
-                <div class="nav-wrapper white">
-                    <a href="#" class="brannd-logo black-text" style="display: inline-flex;">
-                        <img class="institute-logo responsive-img" :src="instituteLogo" />
-                        <span class="institute-name">Prabha Institute of Civil Services</span>
-                    </a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a class="theme-color" href="#contact-section">Contact</a></li>
-                        <li><a class="btn white-text theme-background" href="#join-section">Join Classes</a></li>
-                    </ul>
-                </div>
-            </nav>
+	<div class="top">
+	<span class="mat">
+	<i class="fa fa-phone" aria-hidden="true"></i>
+	9810651005</span>
+</div>
+	<header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Prabha Institite of Civil Services</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            <section>
-                <div class="section header-slider">
-                    <div class="carousel carousel-slider banner-carousel" ref="bannerCarousel">
-                        <a class="carousel-item banner-carousel-item" v-for="(banner,index) in banners" :key="index"
-                            @click="openLink(banner.action)"><img class=" z-depth-3" :src="banner.image"></a>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="section header-slider">
-                    <div class="carousel carousel-slider video-carousel" ref="videoCarousel">
-                        <div class="carousel-item video-carousel-item" v-for="(video,index) in videos" :key="index">
-                            <div class="section row youtube-video-section">
-                                <div class="col s12 m5 main-holder">
-                                    <div class="title">{{video.title}}</div>
-                                    <div class="subtitle">{{video.subtitle}}</div>
-                                    <div class="message">{{video.message}}</div>
-                                    <div class="action-buttons">
-                                        <a class="waves-effect waves-light btn theme-background"
-                                            href="#join-section">Join
-                                            Classes</a>
-                                    </div>
-                                </div>
-                                <div class="col s12 m7">
-                                    <div class="youtube-video-holder">
-                                        <iframe class="youtube-video z-depth-3"
-                                            :src="'https://www.youtube.com/embed/'+video.youtubeId+'?modestbranding=1&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&controls=0&disablekb=1'">
-                                        </iframe>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <br>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- <section>
-                <div class="section row youtube-video-section">
-                    <div class="col s12 m5 main-holder">
-                        <div class="title">Accounting</div>
-                        <div class="subtitle">Financial Accounting</div>
-                        <div class="message">Discover what's behind the numbers in financial statements.</div>
-                        <div class="action-buttons">
-                            <a class="waves-effect waves-light btn theme-background" href="#join-section">Join
-                                Classes</a>
-                        </div>
-                    </div>
-                    <div class="col s12 m7">
-                        <div class="youtube-video-holder">
-                            <iframe class="youtube-video z-depth-3"
-                                :src="'https://www.youtube.com/embed/'+youtubeVideoId+'?modestbranding=1&rel=0&cc_load_policy=1&iv_load_policy=3&theme=light&controls=0&disablekb=1'">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
-            <!-- <section>
-                <div class="carousel topper-carousel" ref="topperCarousel">
-                    <div class="carousel-item topper-carousel-item" v-for="(topper,index) in toppers" :key="index">
-                        <div class="topper-carousel-item-inner">
-                            <img class="circle" width="80" height="80" :src="topper.image">
-                            <div class="name">{{topper.name}}</div>
-                            <div class="subtext">{{topper.subtext}}</div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
-           
-
-
-            <section>
-                <div class="section row">
-                    <div class="col s12">
-                        <div class="main-holder">
-                            <div class="title">
-                                Our Books
-                            </div>
-                             <div class="subtitle">
-                                    Prabha Publications
-                            </div>
-                        </div>
-                    </div>
-<!-- fixed text flaoting and margin errors-->
-                    <div class="col s6 m4 l3" v-for="(book,index) in books" :key="index">
-                        <div class="card z-depth-3">
-                            <div class="card-image waves-effect waves-block waves-light" style="padding-top: 140%;"
-                                @click="openLink(book.url)">
-                                <img class="activator" :src="book.image" style="position: absolute;height: 100%;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <a href="https://www.amazon.in/s?me=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV" target="_blank" class="waves-effect theme-background col s12 waves-light btn-large">See All Books</a>
-
-                </div>
-            </section>
-
-            <section>
-                <div class="section row">
-                    <div class="col s12">
-                        <div class="main-holder">
-                            <div class="title">
-                                Our Courses
-                            </div>
-                            <!-- <div class="subtitle">
-                                Cour
-                            </div> -->
-                        </div>
-                    </div>
-
-                    <div class="col s6 m4 l3" v-for="(course,index) in courses" :key="index">
-                        <div class="card course-card z-depth-3">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" :src="course.image">
-                            </div>
-                            <div class="card-content" style="height: 140px;">
-                                <span
-                                    class="card-title course-name activator grey-text text-darken-4">{{course.name}}</span>
-                            </div>
-                            <div class="card-reveal">
-                                <span class="card-title course-name grey-text text-darken-4">{{course.name}}<i
-                                        class="material-icons right">close</i></span>
-                                <p>{{course.description}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- <section>
-                    <div class="section row">
-                        <div class="col s12">
-                            <div class="main-holder">
-                                <div class="title">
-                                    Downloads
-                                </div>
-                                <div class="subtitle">
-                                    Download our free content
-                                </div>
-                            </div>
-                        </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a  class="nav-link" href="#page1">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact">Contact</a>
+      </li>
+       <a class="nav-link" href="#join"><input class="btn btn-primary" type="button" value="Join Classes "></a>
+    </ul>
     
-                        <div class="col s6 m4 l3" v-for="(download,index) in downloads" :key="index">
-                            <div class="card download-card z-depth-3" @click="openLink(download.url)">
-                                <div class="card-image waves-effect waves-block waves-light"
-                                    :class="'mild-background-'+(index%9)">
-                                    <i class="material-icons">insert_drive_file</i>
-                                </div>
-                                <div class="card-content" style="height: 100px;">
-                                    <span class="card-title activator grey-text text-darken-4">{{download.name}}</span>
-                                </div>
-                            </div>
-                        </div>
-    
-                    </div>
-                </section> -->
+  </div>
+</nav>
+</header>
 
+<section id="page1">
+<div class="sx1">
+<div class="container" >
+ 
+<div class="sc1">
+<div id="demo" class="carousel slide" data-ride="carousel">
 
-            <section id="join-section">
-                <div class="section row" style="overflow: hidden; padding-bottom: 44px;">
-                    <div class="col s12 m5">
-                        <div class="main-holder">
-
-
-                            <div class="title">
-                                Join Classes
-                            </div>
-                            <div class="subtitle">
-                                Download <span class="theme-color">Mobishaala</span> App
-                            </div>
-                            <div class="subtitle" style="margin-top: 16px; margin-bottom: 16px;">
-                                Use Institute code <b class="theme-color">{{instituteCode}}</b>
-                            </div>
-<!-- fixed padding and marginon app icons-->
-                            <div class="bottomHolder">
-                                <div class="center-align">
-                                    <a
-                                        href="https://play.google.com/store/apps/details?id=com.mobishaala.app&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
-                                        target="_blank"><img height="50" alt="Get it on Google Play"
-                                            src="./assets/playstore.png"></a>
-                                    <a 
-                                        href="https://itunes.apple.com/gb/app/mobishaala/id1316602075?mt=8"
-                                        target="_blank"><img alt="Get it on App Store" height="50"
-                                            src="./assets/appstore.svg"></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col s12 m7">
-                        <div class="center-align">
-                            <div class="iphone big z-depth-3">
-                                <img class="screenshot" src="./assets/screen.png" />
-                                <img src="./assets/iphonex.png" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- <section>
-                <div class="section header-slider">
-                    <div class="carousel carousel-slider testimony" ref="testimonyCarousel">
-                        <a class="carousel-item testimony-item" v-for="(testimony,index) in testimonies" :key="index"
-                            href="#one!">
-                            <div class="card testimony-card z-depth-3">
-                                <div class="card-image">
-                                    <div class="">
-                                        <div class="testimony">
-                                            <i class='material-icons'
-                                                style="transform: rotate(180deg) translate(0px, -20px);">format_quote</i>
-                                            <div class="center-align" style="padding: 16px;">{{testimony.text}}</div>
-                                            <i class='material-icons right'
-                                                style="transform: translate(0px, -20px);">format_quote</i>
-                                        </div>
-                                        <br>
-                                        <div class="testimony-author center-align">
-                                            {{testimony.author}}
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title">See what our students have to say about us</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section> -->
-            <section id="contact-section">
-                <div class="section row" style="overflow: hidden; padding-bottom: 44px;">
-                    <div class="col s12 m5">
-                        <div class="main-holder">
-                            <div class="title">
-                                Contact
-                            </div>
-                            <div class="subtitle">
-                                Delhi Office
-                            </div>
-                            <div class="message">
-                                Call : +91 9810651005<br>
-                                <br>
-                                Email: atulklohiya@gmail.com<br>
-                                <br>
-                                # 105, 1st Floor,<br> Virat Bhawan Dr. Mukherjee Nagar,<br> Delhi 110009
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col s12 m7">
-                        <div class="gmap-holder z-depth-3">
-                            <iframe class="gmap"
-                                :src="'https://maps.google.com/maps?q='+ encodeURIComponent(mapquery) +'&center='+latitude+','+longitude+'&z=13&ie=UTF8&iwloc=&output=embed'"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer class="page-footer theme-background">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Prabha Institute of Civil Services</h5>
-                        <p class="grey-text text-lighten-4">Prabha institute of Civil Services was established on 15th
-                            August, 2002 for the benefit of the students who want to prepare for Public Administration
-                            but find limited options when it comes to Hindi medium. From 2002 till date we have been
-                            playing a vital role in bringing the Civil Service aspirants into the mainstream of civil
-                            service examination.</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    � 2019 {{instituteName}} powered by Mobishaala
-                </div>
-            </div>
-        </footer>
-        <div class="fixed-action-btn">
-            <a class="btn-floating btn-large green"
-                :href="'https://wa.me/'+whatsappNumber+'?text='+encodeURIComponent(whatsappMessage)" target="_blank">
-                <img class="responsive-img" style="padding:8px" src="./assets/wa_icon.png">
-            </a>
-        </div>
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item banner-carousel-item active">
+      <img src="images/1.jpg" height="337px" width="737px" >
     </div>
-</body>
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script> -->
-<script src="./js/main.js?2"></script>
+    <div class="carousel-item banner-carousel-item">
+      <img src="images/2.jpg" height="337px" width="737px" >
+    </div>
+    <div class="carousel-item banner-carousel-item">
+      <img src="images/4.jpg" height="337px" width="737px">
+    </div>
+  </div>
+</div>
+</div></div></div>
+</section>
 
+<section>
+<div class="container" >
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <!-- Start -->
+<div class="carousel-inner">
+<div class="carousel-item banner-carousel-item active">
+	<div id="leftsidebar" class="sidebar">
+         <h1>Pub Ad Strategy <b>BPSC 65 2020</b></h1>
+         <p>Atul Lohiya sir's lecture on Pub. Ad Strategy for BPSC 65 Mains</p>
+         <input class="btn btn-primary" type="button" value="Join Classes ">
+    </div>
+    <div id="rightsidebar" class="sidebar">
+     	<iframe width="560" height="315" src="https://www.youtube.com/embed/xKwRrPbReMw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+<div class="carousel-item banner-carousel-item">
+	<div id="leftsidebar" class="sidebar">
+        <h1>Mugal Kaleen Adminstration <b>UPSC 2020</b></h1>
+        <p>Atul Lohiya sir's Lecture on Mugal Kallen Adminstration for upsc 2020</p>
+        <input class="btn btn-primary" type="button" value="Join Classes" href="">
+    </div>
+    <div id="rightsidebar" class="sidebar">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/TOlnpKopaDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<div class="carousel-item banner-carousel-item">
+	<div id="leftsidebar" class="sidebar">
+        <h1>Mitigation-Disaster Management <b>UPSC 2020</b></h1>
+        <p>Akashi Lohiya madam's Lecture on Mitigation-Diaster Management for upsc 2020</p>
+        <input class="btn btn-primary" type="button" value="Join Classes ">
+    </div>
+    <div id="rightsidebar" class="sidebar">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2WhIONVlSgs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+</div>
+<!-- End -->
+</div>
+</div>
+</section>
+
+<section id="books">
+<div class="container">
+	<h1 class="text-left text-capitalize">Our Books </h1>
+	<p><b>Prabha Publications</b></p>
+	<div class="row">
+		<div class="books-column col-lg-3 col-md-4 col-6">
+			<div class="card">
+				<a href="https://www.amazon.in/POLITY-NCERT-SAAR-VI-XII-English/dp/9383315644/ref=sr_1_1?m=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV&qid=1572866104&s=merchant-items&sr=1-1"  target="_blank">
+  				<img class="card-img-top" src="images/pz.jpg "></a>
+ 			</div>
+		</div>
+		<div class="books-column col-lg-3 col-md-4 col-6">
+			<div class="card">
+				<a href="https://www.amazon.in/History-Hindi-N-C-R-T-SAR/dp/8192756513/ref=sr_1_2?m=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV&qid=1572866104&s=merchant-items&sr=1-2"  target="_blank">
+  			<img class="card-img-top" src="images/hh.jpg" ></a>
+ 			</div>
+		</div>
+		<div class="books-column col-lg-3 col-md-4 col-6">
+			<div class="card">
+				<a href="https://www.amazon.in/Vastunist-Ncert-Saar-VI-XII-Lohiya/dp/B07VNW515H/ref=sr_1_3?m=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV&qid=1572866104&s=merchant-items&sr=1-3"  target="_blank">
+  			<img class="card-img-top" src="images/vv.jpg"></a>
+ 			</div>
+		</div>
+		<div class="books-column col-lg-3 col-md-4 col-6">
+			<div class="card">
+				<a href="https://www.amazon.in/Rajvaystha-NCERT-VI-XII-Lohiya-Manoj/dp/819275653X/ref=sr_1_4?m=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV&qid=1572866104&s=merchant-items&sr=1-4"  target="_blank">
+  			<img class="card-img-top" src="images/rz.jpg"></a>
+ 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="button">
+<div class=my-btn>
+	<a href="https://www.amazon.in/s?me=AGHGGPQMIBWVH&marketplaceID=A21TJRUUN4KGV"  target="_blank"> <span >SEE ALL BOOKS</span></a>
+</div>
+</div>
+</section>
+
+<section id="syllabus">
+	<div class="container">
+		<h2 class="text-left text-capitalize ">Our courses</h2>
+		<h4><b>Prabha Publications</b></h4>
+	<div>
+	<div class="row">
+			<div class="syllabus-column col-lg-3 col-md-4 col-6">
+				<div class="card">
+					<div class="card-header">
+						<img class="card-img" src="images/c1.jpg" >		
+					</div>
+  				
+  				<div class="card-body">
+    			<p class="courses">Pub Ad|UPSC <br />UPPCS BPSC<br /></p>
+				</div>
+ 			 </div>
+		</div>
+			<div class="syllabus-column col-lg-3 col-md-4 col-6 ">
+				<div class="card">
+					<div class="card-header">
+						<img class="card-img" src="images/c2.jpg" >
+					</div>
+  				
+  				<div class="card-body">
+    				<p class="courses">Ethics | UPSC<br /> UPPCS</p>
+				</div>	
+ 			 </div>
+		</div>
+
+			<div class="syllabus-column col-lg-3 col-md-4 col-6">
+				<div class="card">
+					<div class="card-header">
+						<img class="card-img" src="images/c3.jpg">
+					</div>
+  				
+  				<div class="card-body">
+    				<p class="courses">Disaster<br /> Management|<br />UPSC UPPCS<br /></p>
+				</div>
+ 			 </div>
+		</div>
+
+		<div class="syllabus-column col-lg-3 col-md-4 col-6">
+				<div class="card">
+					<div class="card-header">
+						<img class="card-img" src="images/c4.jpg">		
+					</div>
+  				
+  				<div class="card-body">
+    				<p class="courses">हिंदी साहित्य |<br />UPSC UPPCS</p>
+				</div>
+ 			 </div>
+		</div>
+
+
+		<div class="syllabus-column col-lg-3 col-md-4 col-6">
+				<div class="card">
+					<div class="card-header">
+						<img class="card-img" src="images/c5.jpg">
+					</div>
+  				
+  				<div class="card-body">
+    				<p class="courses">NCERT |SAAR</p>
+				</div>
+ 			 </div>
+		</div>
+	</div>
+</section>
+
+
+<section id="join">
+		<div class="row">
+			<div class="col-lg-6">
+				<h3 class="big-heading">Join Classes </h4>
+      			<div class="sub-heading">
+      				<p>Download <span class="mb" >Mobishaala</span> App</p>
+      			<p>Use Institute code <span class="mb">PICS1005</span></p>      			
+      			</div>
+      			<a href="https://play.google.com/store/apps/details?id=com.mobishaala.app&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" 
+				target="_blank" class="center-align" style="margin-right: 16px;">
+				<img height="50" alt="Get it on Google Play" src="images/googleplay.png"></a>
+
+
+				<a href="https://itunes.apple.com/gb/app/mobishaala/id1316602075?mt=8" target="_blank" class="center-align">
+				<img alt="Get it on App Store" height="50" src="images/applestore.png"></a>
+
+      			<!-- <button type="button" class="btn btn-dark btn-sm download-button"><span style="float: left "><i class="fab fa-apple fa-3x"></i></span> <span style="float:right">Get it<br><b>on Google Play</b></span></button>
+      			<button type="button" class="btn btn-dark btn-sm download-button"><span style="float: left"><i class="fab fa-apple fa-3x"></i></span> <span style="float:right">Download<br><b>on the App Store</b></span></button>   -->    	
+      		</div>		
+
+			<div class="col-lg-6">
+            	<img class="title-image"src="images/mobile.jpg"></img>
+			</div>
+		</div>	
+</section>
+
+<section id="contact">
+	<div class="container">
+		<h1 class="text-center text-capitalize p-5"></h1>
+		<div class="row" id="box">
+			<div class="col-lg-6 col-md-6">
+				<div class=" bg-white text-dark">
+				<h3>Contact</h3>
+      			<p><strong>Delhi Office</strong></p>
+				<p>call: +91 9810651005</p>
+				<p>Email:atulklohiya@gmail.com</p>
+				<p>#105,1st Floor,<br />virat Bhawan Dr. Mukherjee Nagar,<br />Delhi 110009</p>
+      			
+      		</div>		
+			</div>
+			<div class="col-lg-6 col-md-6 " id="mp">
+            	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27995.160842323752!2d77.213454!3d28.707736!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzQwLjciTiA3N8KwMTInNTcuNiJF!5e0!3m2!1sen!2sus!4v1592461270476!5m2!1sen!2sus" width="400" height="280" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>	
+</section>
+
+<section class="services">
+	<div class="container">
+	<article class="py-5 text-white" >
+	<div>
+		<h3>Prabha Institute of Civil Services</h3>
+		<p>Prabha institiute of Civil Services was established on 15th August,2002 for<br /> the benefit of the students who want to prepare for Public Administration<br />  but find limited options when it comes to Hindimedium.From 2002 till<br />  date we have been playing a vital role in bringing the Civil Services aspirants<br />  into the mainstream of civil service examination.</p>
+	</div>
+	</article>
+	</div>
+</section>
+</div>
+<footer >
+	<div class="container">
+		<p>2019 Prabha Institite of Civil Services powered by Mobishaala</p>
+	</div>
+</footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
 </html>
